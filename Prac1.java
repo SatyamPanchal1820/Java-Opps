@@ -11,11 +11,11 @@ class Person {
 
     public static void main(String[] args) {
   
-        Person person1 = new Person();
-        person1.name = "Alice";
-        person1.age = 30;
-        person1.gender = "Female";
-        person1.displayDetails();
+        Person p = new Person();
+        p.name = "Alice";
+        p.age = 19;
+        p.gender = "M";
+        p.displayDetails();
        
     }
 }
