@@ -1,11 +1,22 @@
-public class Student {
+class Student {
+    private String name;
+    private int rollNumber;
+    private int[] marks;
 
-    String name;
-    int rollNumber;
-    int[] marks = new int[5]; 
+    public Student(String name, int rollNumber) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.marks = new int[5]; 
+    }
 
-  
-    public int getTotalMark() {
+    public void setMarks(int[] marks) {
+        this.marks = new int[marks.length]; 
+        for (int i = 0; i < marks.length; i++) {
+            this.marks[i] = marks[i]; 
+        }
+    }
+
+    public double getTotalMarks() {
         int total = 0;
         for (int mark : marks) {
             total += mark;
@@ -13,25 +24,30 @@ public class Student {
         return total;
     }
 
-    public double getAverageMark() {
-        return getTotalMark() / 5.0;
+    public double getAverageMarks() {
+        return getTotalMarks() / marks.length;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
     }
 
     public static void main(String[] args) {
-  
-        Student student = new Student();
-     
-        student.name = "Alice";
-        student.rollNumber = 123;
-        student.marks[0] = 98;
-        student.marks[1] = 93;
-        student.marks[2] = 97;
-        student.marks[3] = 94;
-        student.marks[4] = 74;
+      
+        Student student = new Student("Alice", 123);
 
-        System.out.println("Student Name: " + student.name);
-        System.out.println("Roll Number: " + student.rollNumber);
-        System.out.println("Total Marks: " + student.getTotalMark());
-        System.out.println("Average Marks: " + student.getAverageMark());
+        int[] marks = new int[]{98, 93, 97, 94, 78};
+        student.setMarks(marks);
+
+        double total = student.getTotalMarks();
+        double average = student.getAverageMarks();
+
+        System.out.println("Name: " + student.getName());
+        System.out.println("Roll Number: " + student.getRollNumber());
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average Marks: " + average);
     }
 }
