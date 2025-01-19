@@ -23,7 +23,7 @@ class Circle {
         return 2 * Math.PI * radius;
     }
 
-    public void displayDetail() {
+    public void displayDetails() {
         System.out.println("Radius : " + radius);
       
     }
@@ -32,7 +32,9 @@ class Circle {
 public class CircleTest {
     public static void main(String[] args) {
         Circle ob = new Circle(10);
+        Circle circle = new Circle(20.0);
         ob.displayDetail();
+        ob.displayDetails();
         System.out.println("Area of Circle is " + ob.getArea());
         System.out.println("Perimeter of Circle is " + ob.getPerimeter());
     }
