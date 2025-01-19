@@ -8,11 +8,11 @@ class Supply
     String FoodType;
     
     public void GetType(){
-        if(Sticker.equals("Green"))
+        if(Sticker==("Green"))
            FoodType = "Vegetarian";
-        if(Sticker.equals("Yellow"))
+        if(Sticker==("Yellow"))
            FoodType = "Contains Egg";
-        if(Sticker.equals("Red"))
+        if(Sticker==("Red"))
            FoodType = "Non Vegetarian";
     }
 
