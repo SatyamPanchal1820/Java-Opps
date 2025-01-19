@@ -13,8 +13,8 @@ class Person {
   
         Person person1 = new Person();
         person1.name = "Alice";
-        person1.age = 30;
-        person1.gender = "Female";
+        person1.age = 19;
+        person1.gender = "M";
         person1.displayDetails();
        
     }
