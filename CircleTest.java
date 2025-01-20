@@ -24,7 +24,7 @@ class Circle {
     }
 
     public void displayDetails() {
-        System.out.println("Radius : " + radius);
+        System.out.println("Circle with  <radius> : " + radius   + " units");
 
     }
 }
