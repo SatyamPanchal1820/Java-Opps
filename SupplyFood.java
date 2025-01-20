@@ -7,13 +7,15 @@ class Supply
     String Sticker;
     String FoodType;
     
-    public void GetType(){
+    public String GetType(){
         if(Sticker.equals("Green"))
            FoodType = "Vegetarian";
         if(Sticker.equals("Yellow"))
            FoodType = "Contains Egg";
         if(Sticker.equals("Red"))
            FoodType = "Non Vegetarian";
+
+           return FoodType;
     }
 
     public void FoodIn(){
@@ -27,7 +29,6 @@ class Supply
         GetType();
     }
     
-
     public void FoodOut(){
         System.out.println("You Entered ");
         System.out.println("Food Code     : "+Code);
@@ -39,7 +40,7 @@ class Supply
 
 class SupplyFood
 {
-   public static void main(String args[])
+       public static void main(String args[])
    {
      Supply ob=new Supply();  
      ob.FoodIn();
