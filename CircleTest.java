@@ -32,9 +32,10 @@ class Circle {
 public class CircleTest {
     public static void main(String[] args) {
        Circle circle = new Circle(10.0);
-            circle.displayDetail();
+            circle.displayDetails();
             System.out.println("Area of circle is " + circle.getArea() + " sq. units");
-            circle.setRaidus(20.0);
+            Circle circle2 = new Circle(20.0);
+            circle2.displayDetails();
             System.out.println("Area of circle is " + circle.getArea() + " sq. units");
     }
 }
