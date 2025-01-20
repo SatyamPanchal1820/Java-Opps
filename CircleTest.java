@@ -34,8 +34,8 @@ public class CircleTest {
        Circle circle = new Circle(10.0);
             circle.displayDetails();
             System.out.println("Area of circle is " + circle.getArea() + " sq. units");
-            Circle circle2 = new Circle(20.0);
-            circle2.displayDetails();
+            circle.setRadius(20.0);
+            circle.displayDetails();
             System.out.println("Area of circle is " + circle.getArea() + " sq. units");
     }
 }
